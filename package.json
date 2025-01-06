@@ -1,0 +1,16 @@
+{
+  "name": "tealogger-web",
+  "version": "1.0.0",
+  "description": "Website for managing Evan's tea consumption",
+  "scripts": {
+    "dev": "wrangler pages dev site",
+    "ship": "wrangler pages deploy site"
+  },
+  "author": "ejm",
+  "license": "MIT",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241230.0",
+    "typescript": "^5.7.2",
+    "wrangler": "^3.99.0"
+  }
+}

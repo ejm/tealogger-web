@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Has Evan Had Tea Today?</title>
+  <meta charset="utf-8">
+  <meta name="theme-color" content="hsl(28 79.7% 90%)" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="hsl(28 79.7% 5%)" media="(prefers-color-scheme: dark)">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍵</text></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+  <link href="static/styles.css" rel="stylesheet">
+</head>
+
+<body>
+  <main>
+    <div>
+      <h1>Has Evan had tea today?</h1>
+      <h2 id="yesno">&nbsp;</h2>
+    </div>
+  </main>
+  <footer>
+    Made with 🧡 (and 🍵) by <span class="evan">Evan</span>
+  </footer>
+  <script>
+    async function setTeaConsumed() {
+      const response = await fetch("/api/today");
+      const data = await response.json()
+      document.getElementById("yesno").textContent = data["consumed"] ? "Yes" : "No";
+    }
+    setTeaConsumed();
+  </script>
+</body>
+
+</html>

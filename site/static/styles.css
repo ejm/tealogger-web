@@ -1,0 +1,46 @@
+:root {
+  --bg-color: hsl(28 79.7% 90%);
+  --fg-color: hsl(28 79.7% 5%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: hsl(28 79.7% 5%);
+    --fg-color: hsl(28 79.7% 90%);
+  }
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--fg-color);
+  display: grid;
+  font-family: 'Outfit', sans-serif;
+  grid-template-rows: auto 5%;
+  height: 100vh;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1,
+h2 {
+  text-align: center;
+  margin: 0;
+}
+
+h2 {
+  font-size: 8em;
+}
+
+#yesno {
+  text-transform: uppercase;
+}
+
+.evan {
+  color: #e67e22;
+}
